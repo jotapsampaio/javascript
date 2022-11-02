@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font: normal 25px arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Formatação de strings e numeros
+    </h1>
+    <script>
+        //Strings
+        let nome = prompt('Informe qual é o seu nome: ');
+        document.write(`Olá ${nome}! seu nome tem ${nome.length} letras <br>`); //Length comprimento da string
+        document.write(`O seu nome em letras maiúsculas é assim: ${nome.toUpperCase()} <br>`) //Deixa as lestras maiusculas
+        document.write(`O seu nome em letras minusculas é assim: ${nome.toLowerCase()} <br>`);// letras minusculas
+
+        //Number
+        var numero = 1552.7;
+        document.write(numero.toFixed(2))//Duas casas decimais nesse caso
+        //mudar o ponto para a virgula -> numero.toFixed(2).replace('.', ',');
+        //Transforma na moeda de acordo com a localização 
+        console.log(numero.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+        console.log(numero.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))
+        console.log(numero.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}))
+    </script>
+</body>
+</html>

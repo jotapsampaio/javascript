@@ -30,18 +30,25 @@
         Para tirar a maldição imposta pelos programadores eu preciso escrever Olá, Mundo!!!.
     </p>
     <p class="informacao">
-        Converter string em number e vice-versa (number converte em number sem precisar especificar com o parseint ou parsefloat), no caso da string utilizar o string() ou valor.toString();
+        Converter string em number e vice-versa (number converte em number sem precisar especificar com o parseint ou parsefloat), no caso da string utilizar o string() ou valor.toString(); E formatação de strings
     </p>
     <script>
         //Pode ser usado a conversão tanto direto no pormpt ou na variavel.
-        // var numero01 = Number(prompt('Digite um número qualquer: '));
-        // var numero02 = Number(prompt('Digite um outro número qualquer: '));
-        // var soma = numero01 + numero02;
-        // window.alert('A soma desses dois números é igual a = ' + soma);
+        var numero01 = Number(prompt('Digite um número qualquer: '));
+        var numero02 = Number(prompt('Digite um outro número qualquer: '));
+        var soma = numero01 + numero02;
+        window.alert(`A soma entre ${numero01} e ${numero02} é igual a ${soma}`);
 
         //converter numero em string
-        let idade = 23;
-        console.log(String(idade))
+        let altura = 1.8;
+        console.log(String(altura))
+        
+
+        //Para formatar string pode usar a concatenação ou melhor ainda o template string que usar a `` e ${} para colocar a variavel dentro
+        let nome = 'João Paulo'
+        let idade = 23
+        let sexo = 'Masculino'
+        alert(`O aluno ${nome} de apenas ${idade} anos do sexo ${sexo} é estudante de programação`)
     </script>
 </body>
 </html>
