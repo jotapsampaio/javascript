@@ -16,6 +16,10 @@
             color: orangered;
             text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.589);
         }
+
+        .informacao {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -25,10 +29,19 @@
     <p>
         Para tirar a maldição imposta pelos programadores eu preciso escrever Olá, Mundo!!!.
     </p>
+    <p class="informacao">
+        Converter string em number e vice-versa (number converte em number sem precisar especificar com o parseint ou parsefloat), no caso da string utilizar o string() ou valor.toString();
+    </p>
     <script>
-        window.alert('Primeira interação');
-        window.confirm('Está gostando desse curso?');
-        window.prompt('Digite o seu nome: ');
+        //Pode ser usado a conversão tanto direto no pormpt ou na variavel.
+        // var numero01 = Number(prompt('Digite um número qualquer: '));
+        // var numero02 = Number(prompt('Digite um outro número qualquer: '));
+        // var soma = numero01 + numero02;
+        // window.alert('A soma desses dois números é igual a = ' + soma);
+
+        //converter numero em string
+        let idade = 23;
+        console.log(String(idade))
     </script>
 </body>
 </html>
