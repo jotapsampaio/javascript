@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o Dom</title>
+    <style>
+        body {
+            background-color: rgb(25, 56, 25);
+            color: white;
+            font: normal 25px arial;
+        }
+        
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Iniciando o estudo do Dom
+    </h1>
+    <p>
+        Aqui vai o resultado.
+    </p>
+    <p>
+        Aprendendo a usar o <strong>Dom</strong> em JavaScript.
+    </p>
+    <div id="msg">
+        Clique em mim
+    </div>
+    <div class="botao">
+        Aperte o botão
+    </div>
+    <script>
+        /*
+        Para selecionar um elemento dentro da arvore dom, ela pode ser pela tag, nome, id, class, e o mais recente que é pelo selector.
+        */
+        let corpo = document.body;
+        let p1 = document.getElementsByTagName('p')[0];
+        window.document.write('Está escrito assim: ' + p1.innerHTML);
+        p1.style.color = 'black';
+        // corpo.style.background = 'black';
+        
+        let mensagem = document.getElementById('msg');
+        mensagem.style.background = 'yellow';
+        mensagem.style.color = 'red';
+        mensagem.innerText = 'Carregando...'
+
+        let button = document.querySelector('.botao');
+        button.style.background = 'black';
+        button.style.color = 'orange';
+    </script>
+</body>
+</html>
