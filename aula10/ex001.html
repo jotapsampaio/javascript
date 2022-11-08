@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+    <style>
+        body {
+            background-color: rgb(238, 74, 74);
+        }
+
+        #container {
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: rgb(201, 183, 183);
+            font-size: 30px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        Interaja...
+    </div>
+
+    <!-- <div id="container" onclick="clicou()" onmouseenter="entrou()" onmouseout="saiu()">
+        Interaja...
+    </div> -->
+
+    <!--Pode ser adicionado eventos tanto no html quanto na javascript, nesse modelo eu estou adicionando o html, mais tem uma meneira de adicionar somente no js, com o addEventListener-->
+    <script>
+        var quadrado = document.querySelector('#container');
+        quadrado.addEventListener('click', clicou);
+        quadrado.addEventListener('mouseenter', entrou);
+        quadrado.addEventListener('mouseout', saiu);
+
+        function clicou(){
+            quadrado.innerText = 'Clicou!!!';
+            quadrado.style.background = 'gray';
+        }
+        function entrou(){
+            quadrado.innerText = 'Entrou!!!';
+        }
+        function saiu(){
+            quadrado.innerText = 'Saiu!!!';
+            quadrado.style.background = 'blue';
+        }
+    </script>
+</body>
+</html>
