@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de velocidade</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Teste de velocidade
+    </h1>
+    <div>
+        <label for="vel">Digite a sua velocidade:</label>
+        <input type="number" name="vel" id="vel" placeholder="Digite aqui ...">
+        <input type="button" value="verificar" onclick="calcular()">
+    </div>
+    <p id="resposta">
+        Resultado:
+    </p>
+    <script>
+        function calcular(){
+            var velocidade = document.querySelector("#vel");
+            var minhaVelocidade = Number(velocidade.value);
+            var resultado = document.querySelector("#resposta");
+            resultado.innerHTML = `<p>Sua velocidade é de <strong>${minhaVelocidade} km/h</strong>. </p>`;
+            if (minhaVelocidade > 60){
+                resultado.innerHTML += `<p> Você foi <strong> MULTADO </strong> por ultrapassa a velocidade permitida. </p>` 
+            }
+            resultado.innerHTML += `<p>Fique seguro, use o cinto de segurança!</p>`
+        }
+    </script>
+</body>
+</html>
