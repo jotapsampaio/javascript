@@ -52,9 +52,11 @@ function verificar(){
                 img.setAttribute("src", "./images/idosa_mulher.jpg");
             }
         }
+        
         resultado.style.textAlign = "center";
         resultado.innerHTML = `Detectamos um(a) ${genero} com ${idade} anos.`;
         resultado.appendChild(img);
+        img.style.borderRadius = "50%";
     }
     
 }
